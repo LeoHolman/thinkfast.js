@@ -1,0 +1,18 @@
+#gameContainer{
+    width: 100%;
+    padding: 0;
+}
+
+#questionScreen, #responseScreen, #buttonContainer, #librarian, #student, #responseScreen {
+    text-align: center;
+}
+
+button {
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+}
+
+button > img {
+    height: 9vw;
+}
