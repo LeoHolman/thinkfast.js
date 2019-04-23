@@ -1,10 +1,30 @@
+body{
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
 #gameContainer{
     width: 100%;
     padding: 0;
+    margin-top: 30px;
 }
 
 #questionScreen, #responseScreen, #buttonContainer, #librarian, #student, #responseScreen {
     text-align: center;
+}
+
+#questionScreen {
+    border: solid;
+    border-color: #000;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#buttonContainer {
+    margin-bottom: 30px;
+}
+
+#librarian {
+    margin-bottom: 30px;
 }
 
 button {
