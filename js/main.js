@@ -1,7 +1,20 @@
+//Lara feedback
+// Label source types
+// Reiterate "Choose a source to start with"
+// add color + 1
+// set response off to the side, do not require scrolling 
+// maybe a speech bubble off to the side
+
+// change label from reference desk to "Librarian"
+//remove database option, makes no sense
+
+//prevent moving on before first correct answer
+//display other possible answers
+
 //get constants
 const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
-const questions = {
+const questions = { //placeholder questions
     "1" : {
         "question" : "I'm writing a paper about computer science ethics.",
         "database" : "Good place to start looking! Try narrowing your search results to only scholarly articles."
@@ -26,20 +39,16 @@ document.getElementById("book").addEventListener("click", () => {
 });
 
 document.getElementById("web").addEventListener("click", () => {
-    checkAnswer("web");
+    checkAnswer("web"); //label as "an external website"
 });
 
 document.getElementById("database").addEventListener("click", () => {
     checkAnswer("database");
-});
+}); //eliminate
 
 // document.getElementById("magazine").addEventListener("click", () => {
 //     checkAnswer("magazine");
-// });
-
-// document.getElementById("encyclopedia").addEventListener("click", () => {
-//     checkAnswer("encyclopedia");
-// });
+// }); //add
 
 function setResponseScreenText(string){
     responseScreenText.innerHTML = string;
