@@ -62,7 +62,7 @@ var thisQuestionNumber = 0;
 function nextQuestion(){
     if(thisQuestionNumber < Object.keys(questions).length){
         thisQuestionNumber++;
-        setQuestionScreenText(questions[thisQuestionNumber].question);
+        setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
     }
 }
 
