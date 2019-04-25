@@ -8,8 +8,19 @@ body{
     margin-top: 30px;
 }
 
-#questionScreen, #responseScreen, #buttonContainer, #librarian, #student, #responseScreen {
+#questionScreen, #responseScreen, #buttonContainer, #student, #responseScreen {
     text-align: center;
+}
+
+#responseScreen {
+    position: relative;
+    padding-left: 2vw;
+    width: 55vw;
+    top: 4vw;
+    font-size: 1.5em;
+    border: solid;
+    border-color: #000;
+    border-radius: 15px;
 }
 
 #questionScreen {
@@ -25,6 +36,11 @@ body{
 
 #librarian {
     margin-bottom: 30px;
+    text-align: right;
+}
+
+#librarian > img {
+    width: 40vw;
 }
 
 button {
