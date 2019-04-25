@@ -17,7 +17,7 @@ const responseScreenText = document.getElementById("responseScreenText");
 const questions = { //placeholder questions
     "1" : {
         "question" : "I'm writing a paper about computer science ethics.",
-        "database" : "Good place to start looking! Try narrowing your search results to only scholarly articles."
+        "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles."
     },
     "2" : {
         "question" : "Where can I find information about medival architecture?",
@@ -42,9 +42,6 @@ document.getElementById("web").addEventListener("click", () => {
     checkAnswer("web"); //label as "an external website"
 });
 
-document.getElementById("database").addEventListener("click", () => {
-    checkAnswer("database");
-}); //eliminate
 
 // document.getElementById("magazine").addEventListener("click", () => {
 //     checkAnswer("magazine");
