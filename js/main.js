@@ -1,12 +1,5 @@
 //Lara feedback
-// Label source types
 // Reiterate "Choose a source to start with"
-// add color + 1
-// set response off to the side, do not require scrolling 
-// maybe a speech bubble off to the side
-
-// change label from reference desk to "Librarian"
-//remove database option, makes no sense
 
 //prevent moving on before first correct answer
 //display other possible answers
@@ -26,26 +19,29 @@ const questions = { //placeholder questions
 };
 
 //Wire up buttons
-document.getElementById("journal").addEventListener("click", () => {
-    checkAnswer("journal");
-});
-
-document.getElementById("newspaper").addEventListener("click", () => {
-    checkAnswer("newspaper");
-});
-
 document.getElementById("book").addEventListener("click", () => {
     checkAnswer("book");
+});
+
+document.getElementById("journal").addEventListener("click", () => {
+    checkAnswer("journal");
 });
 
 document.getElementById("web").addEventListener("click", () => {
     checkAnswer("web"); //label as "an external website"
 });
 
+document.getElementById("newspaper").addEventListener("click", () => {
+    checkAnswer("newspaper");
+});
 
-// document.getElementById("magazine").addEventListener("click", () => {
-//     checkAnswer("magazine");
-// }); //add
+document.getElementById("tradePublication").addEventListener("click", () => {
+    checkAnswer("tradePublication");
+}); 
+
+document.getElementById("magazine").addEventListener("click", () => {
+    checkAnswer("magazine");
+}); 
 
 function setResponseScreenText(string){
     responseScreenText.innerHTML = string;
