@@ -4,7 +4,6 @@ body{
 
 #gameContainer{
     width: 90%;
-    padding: 0;
     margin: 30px auto;
     padding: 0 30px;
 }
@@ -49,7 +48,7 @@ body{
 
 button {
     width: 14vw;
-    margin: 0;
+    margin-bottom: 10px;
     padding-top: 20px;
 }
 
