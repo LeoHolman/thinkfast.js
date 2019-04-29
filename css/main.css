@@ -14,16 +14,19 @@ body{
 }
 
 #responseScreen {
-    position: relative;
     padding-left: 2vw;
-    width: 55vw;
-    top: 4vw;
+    width: 49vw;
     font-size: 1.5em;
     border: solid;
     border-color: #000;
     border-radius: 15px;
+    display: inline-block;
 }
 
+#responseScreen > p {
+    margin: 20px;
+    display: inline-block;
+}
 #questionScreen {
     border: solid;
     border-color: #000;
@@ -41,7 +44,7 @@ body{
 }
 
 #librarian > img {
-    width: 40vw;
+    width: 30vw;
 }
 
 button {
@@ -61,13 +64,31 @@ button > p {
 
 @media only screen and (max-width:1200px){
     button {
-        width: 25vw;
+        width: 20vw;
+    }
+
+    #responseScreen {
+        width: 100%;
+        display: block;
+    }
+
+    #librarian {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #librarian > img {
+        width: 50vw;
     }
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:850px){
     #questionScreen {
         font-size: 0.8em;
+    }
+
+    button {
+        width: 25vw;
     }
 
     button > p {
