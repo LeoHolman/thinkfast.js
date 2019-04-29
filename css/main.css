@@ -58,3 +58,19 @@ button > p {
     color: black;
     font-size: 1.4em;
 }
+
+@media only screen and (max-width:1200px){
+    button {
+        width: 25vw;
+    }
+}
+
+@media only screen and (max-width:800px){
+    #questionScreen {
+        font-size: 0.8em;
+    }
+
+    button > p {
+        font-size: 1em;
+    }
+}
