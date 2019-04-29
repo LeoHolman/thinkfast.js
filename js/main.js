@@ -10,11 +10,13 @@ const responseScreenText = document.getElementById("responseScreenText");
 const questions = { //placeholder questions
     "1" : {
         "question" : "I'm writing a paper about computer science ethics.",
-        "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles."
+        "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles.",
+        "goodResponses" : ["journal","book","tradePublication"]
     },
     "2" : {
         "question" : "Where can I find information about medival architecture?",
-        "book" : "This kind of information isn't changing quickly, so you might try a print book."
+        "book" : "This kind of information isn't changing quickly, so you might try a print book.",
+        "goodResponses" : ["journal","book","web"]
     }
 };
 
@@ -53,11 +55,23 @@ function setQuestionScreenText(string){
 
 function checkAnswer(buttonName){
     let response = questions[thisQuestionNumber][buttonName];
-    setResponseScreenText(response);
-    setTimeout(nextQuestion, 1000);
-    document.getElementById("book").focus();
-
+    let goodResponses = questions[thisQuestionNumber].goodResponses;
+    var found = false;
+    for (var i = 0; i<goodResponses.length; i++){
+        if(goodResponses[i] == buttonName) {
+            found = true;
+            break;
+         }
+    }
+    if(found){
+        setResponseScreenText(response);
+        setTimeout(nextQuestion, 1000);
+        document.getElementById("book").focus();
+    } else {
+        setResponseScreenText(response + " \nTry again!");
+    }
 }
+
 //Initalize to 0 so first question appears
 var thisQuestionNumber = 0;
 
