@@ -4,9 +4,15 @@
 //prevent moving on before first correct answer
 //display other possible answers
 
+//student slides away
+//new student with different colored backpack slides away
+
+
 //get constants
+const responseSceen = document.getElementById("responseScreen");
 const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
+const moreResponse = document.getElementById("moreResponse");
 const questions = { //placeholder questions
     "1" : {
         "question" : "I'm writing a paper about computer science ethics.",
@@ -30,7 +36,7 @@ document.getElementById("journal").addEventListener("click", () => {
 });
 
 document.getElementById("web").addEventListener("click", () => {
-    checkAnswer("web"); //label as "an external website"
+    checkAnswer("web"); 
 });
 
 document.getElementById("newspaper").addEventListener("click", () => {
@@ -53,22 +59,33 @@ function setQuestionScreenText(string){
     questionScreenText.innerHTML = string;
 }
 
+function setMoreResponse(string){
+    moreResponse.innerHTML = string;
+}
+
 function checkAnswer(buttonName){
     let response = questions[thisQuestionNumber][buttonName];
     let goodResponses = questions[thisQuestionNumber].goodResponses;
+    var otherGoodResponses = [];
     var found = false;
     for (var i = 0; i<goodResponses.length; i++){
         if(goodResponses[i] == buttonName) {
             found = true;
-            break;
+         }
+         else {
+             otherGoodResponses.push(goodResponses[i]);
+             console.log(otherGoodResponses);
          }
     }
+    otherGoodResponses = otherGoodResponses.join(", ")
     if(found){
         setResponseScreenText(response);
+        setMoreResponse("You might also try: " + otherGoodResponses);
         setTimeout(nextQuestion, 1000);
         document.getElementById("book").focus();
     } else {
-        setResponseScreenText(response + " \nTry again!");
+        setResponseScreenText(response);
+        setMoreResponse("Try again!");
     }
 }
 
