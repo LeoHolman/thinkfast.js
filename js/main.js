@@ -16,8 +16,9 @@ const responseScreenText = document.getElementById("responseScreenText");
 const moreResponse = document.getElementById("moreResponse");
 const questions = { //placeholder questions
     "1" : {
-        "question" : "I'm writing a paper about computer science ethics.",
+        "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
         "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles.",
+        "magazine" : "A magazine is not a good place to look for scholarly information.",
         "goodResponses" : ["journal","book","tradePublication"]
     },
     "2" : {
