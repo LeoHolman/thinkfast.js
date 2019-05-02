@@ -64,6 +64,19 @@ body{
     width: 30vw;
 }
 
+#student {
+    /* text-align: center; */
+    position: absolute;
+    right: 10%;
+    bottom: 30px;
+    animation-name: walkToDeskDesktop;
+    animation-duration: 2s;
+}
+
+#student > img {
+    width: 10vw;
+}
+
 button {
     width: 14vw;
     margin-bottom: 10px;
@@ -84,6 +97,11 @@ button > img {
 button > p {
     color: black;
     font-size: 1.4em;
+}
+
+@keyframes walkToDeskDesktop {
+    0% {right: 0;}
+    100% {right: 10%;}
 }
 
 @media only screen and (max-width:1200px){
