@@ -68,6 +68,10 @@ function studentWalkAway(){
     student.style.animationName = "walkFromDeskDesktop";
 }
 
+function studentWalksUp(){
+    student.style.animationName = "walkToDeskDesktop";
+}
+
 function checkAnswer(buttonName){
     let response = questions[thisQuestionNumber][buttonName];
     let goodResponses = questions[thisQuestionNumber].goodResponses;
@@ -99,6 +103,7 @@ function checkAnswer(buttonName){
 var thisQuestionNumber = 0;
 
 function nextQuestion(){
+    setTimeout(studentWalksUp, 300);
     if(thisQuestionNumber < Object.keys(questions).length){
         thisQuestionNumber++;
         setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
