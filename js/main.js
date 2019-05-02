@@ -9,6 +9,7 @@
 
 
 //get constants
+const student = document.getElementById("student");
 const responseSceen = document.getElementById("responseScreen");
 const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
@@ -63,6 +64,10 @@ function setMoreResponse(string){
     moreResponse.innerHTML = string;
 }
 
+function studentWalkAway(){
+    student.style.animationName = "walkFromDeskDesktop";
+}
+
 function checkAnswer(buttonName){
     let response = questions[thisQuestionNumber][buttonName];
     let goodResponses = questions[thisQuestionNumber].goodResponses;
@@ -82,6 +87,7 @@ function checkAnswer(buttonName){
         setResponseScreenText(response);
         setMoreResponse("You might also try: " + otherGoodResponses);
         setTimeout(nextQuestion, 1000);
+        setTimeout(studentWalkAway, 500);
         document.getElementById("book").focus();
     } else {
         setResponseScreenText(response);
