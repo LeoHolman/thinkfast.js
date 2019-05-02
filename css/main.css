@@ -6,6 +6,11 @@ body{
     background-color:rgb(215, 210, 203, .5);
 }
 
+#instructionsContainer {
+    font-size: 1.4em;
+    text-align: center;
+}
+
 #gameContainer{
     width: 90%;
     margin: 30px auto;

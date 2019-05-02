@@ -84,7 +84,6 @@ function checkAnswer(buttonName){
          }
          else {
              otherGoodResponses.push(goodResponses[i]);
-             console.log(otherGoodResponses);
          }
     }
     otherGoodResponses = otherGoodResponses.join(", ")
