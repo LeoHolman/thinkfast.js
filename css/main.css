@@ -49,6 +49,7 @@ body{
     margin:0;
     grid-row:2/3;
     grid-column:1/2; */
+    margin-bottom: 20px;
 }
 
 #librarian {
@@ -111,7 +112,7 @@ button > p {
     }
 
     button {
-        width: 25vw;
+        width: 27vw;
     }
 
     button > p {
