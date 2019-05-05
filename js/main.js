@@ -1,11 +1,13 @@
 //Lara feedback
-// Reiterate "Choose a source to start with"
+//new student with different colored backpack slides up
 
-//prevent moving on before first correct answer
-//display other possible answers
+//Aaron notes
+//Remove images at mobile size
 
-//student slides away
-//new student with different colored backpack slides away
+//christine notes
+//book back cover darker
+//newpaper slightly gray
+//(web inside a computer monitor)
 
 
 //get constants
