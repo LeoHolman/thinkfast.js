@@ -1,7 +1,6 @@
 //Lara feedback
 //feedback as to why student is leaving
 // maybe student says thanks, and then button for next student
-// fix student size at smaller sizes
 
 //christine notes
 //book back cover darker
@@ -23,13 +22,13 @@ const questions = {
         "magazine" : "A magazine is not a good place to look for scholarly information.",
         "goodResponses" : ["journal","book","tradePublication"]
     },
-    "2" : {
+    "2" : { //placeholder question
         "question" : "Where can I find information about medival architecture?",
         "book" : "This kind of information isn't changing quickly, so you might try a print book.",
         "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
     },
-    "default" : { //placeholder question
+    "default" : { 
         "question" : "placeholder question",
         "book" : "Books can contain both scholarly and practical information on a topic often written by experts in their field.",
         "journal" : "Journals are a great place to look for scholarly information in a given field.",

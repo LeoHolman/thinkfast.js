@@ -65,7 +65,23 @@ body{
 }
 
 #student > img {
+    margin-top: 2vw;
     width: 10vw;
+}
+
+#studentMessageWrapper {
+    text-align: right;
+    margin: 0;
+}
+
+#studentMessage {
+    font-size: 3em;
+    background-color: white;
+    display: inline;
+    border: solid black;
+    border-radius: 7px;
+    margin-right: 4vw;
+    padding: 9px;
 }
 
 button {
@@ -89,6 +105,8 @@ button > p {
     color: black;
     font-size: 1.4em;
 }
+
+
 
 @keyframes walkToDeskDesktop {
     0% {right: 0;}
