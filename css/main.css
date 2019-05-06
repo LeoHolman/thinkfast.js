@@ -82,6 +82,7 @@ body{
     border-radius: 7px;
     margin-right: 4vw;
     padding: 9px;
+    font-weight: bold;
 }
 
 button {
@@ -141,8 +142,13 @@ button > p {
         bottom: 25vw;
         right: 25%;
     }
+
     #student > img{
         width: 14vw;
+    }
+
+    #studentMessage {
+        font-size: 2em;
     }
 
     @keyframes walkToDeskDesktop {
@@ -169,5 +175,9 @@ button > p {
 
     button > img {
         display: none;
+    }
+
+    #studentMessage {
+        font-size: 1em;
     }
 }

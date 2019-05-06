@@ -16,6 +16,7 @@ const responseScreenText = document.getElementById("responseScreenText");
 const moreResponse = document.getElementById("moreResponse");
 const responseScreenFeedback = document.getElementById("responseScreenFeedback");
 const studentImage = document.getElementById("studentImage");
+const studentMessage = document.getElementById("studentMessage");
 const questions = { 
     "1" : { //placeholder question
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
@@ -82,12 +83,17 @@ function setResponseFeedback(string){
     responseScreenFeedback.innerHTML = string;
 }
 
+function setStudentSpeechBubble(string){
+    studentMessage.innerHTML = string;
+}
+
 function studentWalkAway(){
     student.style.animationName = "walkFromDeskDesktop";
 }
 
 function studentWalksUp(){
     student.style.animationName = "walkToDeskDesktop";
+    setStudentSpeechBubble("?");
 }
 
 function changeStudentBackpack(){
@@ -126,6 +132,7 @@ function checkAnswer(buttonName){
         setResponseFeedback("Good answer!");
         setResponseScreenText(response);
         setMoreResponse("Other good choices might be: " + otherGoodResponses);
+        setStudentSpeechBubble("Thanks!");
         setTimeout(nextQuestion, 1000);
         setTimeout(studentWalkAway, 500);
         setTimeout(changeStudentBackpack, 1250);
@@ -135,6 +142,7 @@ function checkAnswer(buttonName){
         setResponseFeedback("Not the best choice...");
         setResponseScreenText(response);
         setMoreResponse("Try again!");
+        setStudentSpeechBubble("??");
     }
 }
 
