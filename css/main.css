@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 body{
-    /* font-family: Verdana, Helvetica, sans-serif; */
     font-family: 'Quicksand', sans-serif;
     background-color:rgb(215, 210, 203, .5);
 }
@@ -15,9 +14,6 @@ body{
     width: 90%;
     margin: 0px auto;
     padding: 0 30px;
-    /* display:grid; */
-    /* grid-template-columns:1fr 1.3fr; */
-    /* grid-template-rows:.5fr 2fr 1fr; */
 }
 
 #questionScreen, #responseScreen, #buttonContainer, #student, #responseScreen {
@@ -47,22 +43,12 @@ body{
 }
 
 #buttonContainer {
-    /* display:grid; 
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows: auto; 
-     width:45vw;
-    margin:0;
-    grid-row:2/3;
-    grid-column:1/2; */
     margin-bottom: 20px;
 }
 
 #librarian {
     margin-bottom: 30px;
     text-align: right;
-    /* grid-row:2/4; */
-    /* grid-column:2/3; */
-    /* margin-top:18em; */
 }
 
 #librarian > img {
@@ -131,6 +117,19 @@ button > p {
 
     #librarian > img {
         width: 50vw;
+    }
+
+    #student {
+        bottom: 25vw;
+        right: 25%;
+    }
+    #student > img{
+        width: 14vw;
+    }
+
+    @keyframes walkToDeskDesktop {
+        0% {right: 0;}
+        100% {right: 25%;}
     }
 }
 
