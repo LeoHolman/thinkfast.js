@@ -1,8 +1,7 @@
 //Lara feedback
-//new student with different colored backpack slides up
-
-//Aaron notes
-//Remove images at mobile size
+//feedback as to why student is leaving
+// maybe student says thanks, and then button for next student
+// fix student size at smaller sizes
 
 //christine notes
 //book back cover darker
@@ -16,6 +15,7 @@ const responseSceen = document.getElementById("responseScreen");
 const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
 const moreResponse = document.getElementById("moreResponse");
+const responseScreenFeedback = document.getElementById("responseScreenFeedback");
 const questions = { //placeholder questions
     "1" : {
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
@@ -26,7 +26,18 @@ const questions = { //placeholder questions
     "2" : {
         "question" : "Where can I find information about medival architecture?",
         "book" : "This kind of information isn't changing quickly, so you might try a print book.",
+        "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
+    },
+    "3" : {
+        "question" : "placeholder question",
+        "book" : "Books can contain both scholarly and practical information on a topic often written by experts in their field.",
+        "journal" : "Journals are a great place to look for scholarly information in a given field.",
+        "web" : "Good websites can lots of detailed information about a particular subject and can be quickly updated to reflect current information. It's important to know who is producing the website and for what purpose to avoid using biased information.",
+        "newspaper" : "Newspapers are good sources for current information or topics of local interest.",
+        "tradePublication" : "Trade publications highlight industry trends and include detailed (often practical) articles relevant to a particular field.",
+        "magazine" : "Magazines are helpful when researching current topics. They are designed for non-experts and usually include less jargon, or technical language.",
+        "goodResponses" : []
     }
 };
 
@@ -67,12 +78,29 @@ function setMoreResponse(string){
     moreResponse.innerHTML = string;
 }
 
+function setResponseFeedback(string){
+    responseScreenFeedback.innerHTML = string;
+}
+
 function studentWalkAway(){
     student.style.animationName = "walkFromDeskDesktop";
 }
 
 function studentWalksUp(){
     student.style.animationName = "walkToDeskDesktop";
+}
+
+function changeStudentBackpack(){
+    let currentStudent = student.firstChild.src;
+    var reg = new RegExp('/student[0-9]');
+    let currentStudentNumber = currentStudent.match(reg).index;
+    console.log(currentStudent[currentStudentNumber]);
+    let number = Math.floor(Math.random() * 4) + 1;
+    if (number != currentStudent[currentStudentNumber]){
+        student.firstChild.src = `images/student${number}.png`;
+    } else {
+        changeStudentBackpack();
+    }
 }
 
 function checkAnswer(buttonName){
@@ -90,12 +118,16 @@ function checkAnswer(buttonName){
     }
     otherGoodResponses = otherGoodResponses.join(", ")
     if(found){
+        setResponseFeedback("Good answer!");
         setResponseScreenText(response);
-        setMoreResponse("You might also try: " + otherGoodResponses);
+        setMoreResponse("Other good choices might be: " + otherGoodResponses);
         setTimeout(nextQuestion, 1000);
         setTimeout(studentWalkAway, 500);
+        setTimeout(changeStudentBackpack, 1300);
         document.getElementById("book").focus();
+        
     } else {
+        setResponseFeedback("Not the best choice...");
         setResponseScreenText(response);
         setMoreResponse("Try again!");
     }
