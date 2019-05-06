@@ -2,6 +2,7 @@
 //feedback as to why student is leaving
 // maybe student says thanks, and then button for next student
 // fix student size at smaller sizes
+// anywhere there isn't a defined response, give generic response
 
 //christine notes
 //book back cover darker
@@ -37,7 +38,7 @@ const questions = { //placeholder questions
         "newspaper" : "Newspapers are good sources for current information or topics of local interest.",
         "tradePublication" : "Trade publications highlight industry trends and include detailed (often practical) articles relevant to a particular field.",
         "magazine" : "Magazines are helpful when researching current topics. They are designed for non-experts and usually include less jargon, or technical language.",
-        "goodResponses" : []
+        "goodResponses" : ["journal"]
     }
 };
 
@@ -93,8 +94,7 @@ function studentWalksUp(){
 function changeStudentBackpack(){
     let currentStudent = student.firstChild.src;
     var reg = new RegExp('/student[0-9]');
-    let currentStudentNumber = currentStudent.match(reg).index;
-    console.log(currentStudent[currentStudentNumber]);
+    let currentStudentNumber = currentStudent.match(reg).index + 8;
     let number = Math.floor(Math.random() * 4) + 1;
     if (number != currentStudent[currentStudentNumber]){
         student.firstChild.src = `images/student${number}.png`;
@@ -123,7 +123,7 @@ function checkAnswer(buttonName){
         setMoreResponse("Other good choices might be: " + otherGoodResponses);
         setTimeout(nextQuestion, 1000);
         setTimeout(studentWalkAway, 500);
-        setTimeout(changeStudentBackpack, 1300);
+        setTimeout(changeStudentBackpack, 1250);
         document.getElementById("book").focus();
         
     } else {
