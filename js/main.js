@@ -15,6 +15,7 @@ const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
 const moreResponse = document.getElementById("moreResponse");
 const responseScreenFeedback = document.getElementById("responseScreenFeedback");
+const studentImage = document.getElementById("studentImage");
 const questions = { 
     "1" : { //placeholder question
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
@@ -90,12 +91,12 @@ function studentWalksUp(){
 }
 
 function changeStudentBackpack(){
-    let currentStudent = student.firstChild.src;
+    let currentStudent = studentImage.src;
     var reg = new RegExp('/student[0-9]');
     let currentStudentNumber = currentStudent.match(reg).index + 8;
     let number = Math.floor(Math.random() * 4) + 1;
     if (number != currentStudent[currentStudentNumber]){
-        student.firstChild.src = `images/student${number}.png`;
+        studentImage.src = `images/student${number}.png`;
     } else {
         changeStudentBackpack();
     }
