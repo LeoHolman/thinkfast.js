@@ -2,7 +2,6 @@
 //feedback as to why student is leaving
 // maybe student says thanks, and then button for next student
 // fix student size at smaller sizes
-// anywhere there isn't a defined response, give generic response
 
 //christine notes
 //book back cover darker
@@ -141,7 +140,7 @@ var thisQuestionNumber = 0;
 
 function nextQuestion(){
     setTimeout(studentWalksUp, 300);
-    if(thisQuestionNumber < Object.keys(questions).length){
+    if(thisQuestionNumber < Object.keys(questions).length - 1){
         thisQuestionNumber++;
         setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
     }
