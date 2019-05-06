@@ -13,7 +13,7 @@ body{
 
 #gameContainer{
     width: 90%;
-    margin: 30px auto;
+    margin: 0px auto;
     padding: 0 30px;
     /* display:grid; */
     /* grid-template-columns:1fr 1.3fr; */
@@ -141,9 +141,16 @@ button > p {
 
     button {
         width: 27vw;
+        padding: 0;
     }
 
     button > p {
         font-size: 1em;
+        padding: 0;
+        vertical-align: middle;
+    }
+
+    button > img {
+        display: none;
     }
 }
