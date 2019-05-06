@@ -17,8 +17,8 @@ const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
 const moreResponse = document.getElementById("moreResponse");
 const responseScreenFeedback = document.getElementById("responseScreenFeedback");
-const questions = { //placeholder questions
-    "1" : {
+const questions = { 
+    "1" : { //placeholder question
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
         "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles.",
         "magazine" : "A magazine is not a good place to look for scholarly information.",
@@ -30,7 +30,7 @@ const questions = { //placeholder questions
         "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
     },
-    "3" : {
+    "default" : { //placeholder question
         "question" : "placeholder question",
         "book" : "Books can contain both scholarly and practical information on a topic often written by experts in their field.",
         "journal" : "Journals are a great place to look for scholarly information in a given field.",
@@ -105,6 +105,9 @@ function changeStudentBackpack(){
 
 function checkAnswer(buttonName){
     let response = questions[thisQuestionNumber][buttonName];
+    if (!response){
+        response = questions["default"][buttonName];
+    }
     let goodResponses = questions[thisQuestionNumber].goodResponses;
     var otherGoodResponses = [];
     var found = false;
