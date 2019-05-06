@@ -91,9 +91,12 @@ function studentWalksUp(){
 }
 
 function changeStudentBackpack(){
-    let currentStudent = studentImage.src;
+    //get source, search for the number of student
+    let currentStudent = studentImage.src; 
     var reg = new RegExp('/student[0-9]');
+    //number determines backpack color
     let currentStudentNumber = currentStudent.match(reg).index + 8;
+    //grab a random number, repeat if grabbed same as previous
     let number = Math.floor(Math.random() * 4) + 1;
     if (number != currentStudent[currentStudentNumber]){
         studentImage.src = `images/student${number}.png`;
