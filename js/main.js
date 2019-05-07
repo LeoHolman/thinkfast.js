@@ -1,5 +1,3 @@
-//Write preface instructions
-
 //get constants
 const student = document.getElementById("student");
 const questionsRemaining = document.getElementById("numberQuestionsRemaining");

@@ -1,0 +1,6 @@
+Welcome to ThinkFast! In this game you act as the librarian answering student reference questions.
+Student will come up to the desk and ask you questions, select the resource type that best meets the student's need with the buttons on screen.
+If you give a resource type that meets the student's need, they will thank you, otherwise, they will stick around until you give them a good resource.
+Read more about each resource type in the feedback box below the buttons.
+There are 10 questions in total, you can track which question you're on with the number at the bottom right of the question. 
+Have fun!
