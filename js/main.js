@@ -3,10 +3,6 @@
 //newpaper slightly gray
 //(web inside a computer monitor)
 
-//When questions are exhausted, give congratulations
-// congrats in questions area
-//  give librarian information in response screen
-
 //Write preface instructions
 //At least hit all of the resources, ~10 questions
 
