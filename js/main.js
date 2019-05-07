@@ -1,5 +1,4 @@
 //Write preface instructions
-//At least hit all of the resources, ~10 questions
 
 //get constants
 const student = document.getElementById("student");
@@ -194,6 +193,9 @@ function nextQuestion(){
         setTimeout(studentWalksUp, 300);
         thisQuestionNumber++;
         setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
+        setResponseFeedback("");
+        setResponseScreenText("");
+        setMoreResponse("");
         setQuestionsRemaining();
     } else {
         setTimeout(() => {
