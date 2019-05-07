@@ -96,6 +96,20 @@ function studentWalksUp(){
     setStudentSpeechBubble("?");
 }
 
+function addNextButton(){
+    let nextButton = document.createElement("BUTTON");
+    nextButton.innerText = "Next Question";
+    nextButton.id = "nextButton";
+    nextButton.addEventListener("click", () => {
+        document.getElementById("nextButton").remove();
+        setTimeout(nextQuestion, 1000);
+        setTimeout(studentWalkAway, 500);
+        setTimeout(changeStudentBackpack, 1250);
+        document.getElementById("book").focus();
+    });
+    responseSceen.appendChild(nextButton);
+}
+
 function changeStudentBackpack(){
     //get source, search for the number of student
     let currentStudent = studentImage.src; 
@@ -133,11 +147,7 @@ function checkAnswer(buttonName){
         setResponseScreenText(response);
         setMoreResponse("Other good choices might be: " + otherGoodResponses);
         setStudentSpeechBubble("Thanks!");
-        setTimeout(nextQuestion, 1000);
-        setTimeout(studentWalkAway, 500);
-        setTimeout(changeStudentBackpack, 1250);
-        document.getElementById("book").focus();
-        
+        addNextButton();
     } else {
         setResponseFeedback("Not the best choice...");
         setResponseScreenText(response);

@@ -107,7 +107,10 @@ button > p {
     font-size: 1.4em;
 }
 
-
+#nextButton {
+    padding: 0;
+    vertical-align: middle;
+}
 
 @keyframes walkToDeskDesktop {
     0% {right: 0;}
