@@ -1,8 +1,3 @@
-//christine notes
-//book back cover darker
-//newpaper slightly gray
-//(web inside a computer monitor)
-
 //Write preface instructions
 //At least hit all of the resources, ~10 questions
 
@@ -19,19 +14,47 @@ const studentMessage = document.getElementById("studentMessage");
 const questions = { 
     "1" : { //Leo question
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
-        "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles.",
+        "journal" : "Good place to start looking! Try narrowing your search results to only relevant articles.",
         "magazine" : "A magazine is not a good place to look for scholarly information.",
         "goodResponses" : ["journal","book","tradePublication"]
     },
     "2" : { //Leo question
-        "question" : "Where can I find information about medival architecture?",
-        "book" : "This kind of information isn't changing quickly, so you might try a print book.",
+        "question" : "Where can I find information about medieval architecture?",
+        "book" : "This kind of information isn't changing quickly, so you might try a book.",
         "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
     },
     "3" : { //Leo question
         "question" : "Where should I go to learn more about IT?",
         "goodResponses" : ["web","book","tradePublication"]
+    },
+    "4" : { //Leo question
+        "question" : "Can you tell me where to look to learn more about Japan?",
+        "goodResponses" : ["web","book","magazine"]
+    },
+    "5" : { //Leo question
+        "question" : "Where can I learn more about the election?",
+        "goodResponses" : ["newspaper","web","magazine"]
+    },
+    "6" : { //Leo question
+        "question" : "Can you help me find information for an economics paper?",
+        "goodResponses" : ["tradePublication", "journal", "book"]
+    },
+    "7" : { //Leo question
+        "question" : "My professor told me to find an article about physics, where should I look?",
+        "goodResponses" : ["journal"]
+    },
+    "8" : { //Leo question
+        "question" : "I'm researching a graphic designer, where can I find information about them?",
+        "goodResponses" : ["book", "web", "magazine"]
+    },
+    "9" : { //Leo question
+        "question" : "Where can I find more information about the history of chess?",
+        "goodResponses" : ["book", "web", "journal", "magazine"]
+    },
+    "10" : { //Leo question
+        "question" : "Where can I find demographic information about college graduates?",
+        "goodResponses" : ["web", "tradePublication","journal"]
     },
     "default" : { 
         "question" : "placeholder question",
