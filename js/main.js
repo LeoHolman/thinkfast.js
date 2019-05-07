@@ -171,11 +171,19 @@ function checkAnswer(buttonName){
 var thisQuestionNumber = 0;
 
 function nextQuestion(){
-    setTimeout(studentWalksUp, 300);
     if(thisQuestionNumber < Object.keys(questions).length - 1){
+        setTimeout(studentWalksUp, 300);
         thisQuestionNumber++;
         setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
         setQuestionsRemaining();
+    } else {
+        setTimeout(() => {
+            student.style.display = "none";
+        });
+        setQuestionScreenText("Congratulations! You've answered all the questions!");
+        setResponseFeedback("For More Information");
+        setResponseScreenText("If you have information questions of your own, ask your librarian at RIT!");
+        setMoreResponse(`<a href="https://library.rit.edu/staff" target="_blank">Meet Your Librarian</a>`);
     }
 }
 
