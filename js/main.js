@@ -3,7 +3,6 @@
 //newpaper slightly gray
 //(web inside a computer monitor)
 
-//Add question number just below question
 //When questions are exhausted, give congratulations
 // congrats in questions area
 //  give librarian information in response screen
@@ -13,6 +12,7 @@
 
 //get constants
 const student = document.getElementById("student");
+const questionsRemaining = document.getElementById("numberQuestionsRemaining");
 const responseSceen = document.getElementById("responseScreen");
 const questionScreenText = document.getElementById("questionScreenText");
 const responseScreenText = document.getElementById("responseScreenText");
@@ -103,6 +103,10 @@ function studentWalksUp(){
     setStudentSpeechBubble("?");
 }
 
+function setQuestionsRemaining(){
+    questionsRemaining.innerHTML = `Question: ${thisQuestionNumber}/10`;
+}
+
 function addNextButton(){
     let nextButton = document.createElement("BUTTON");
     nextButton.innerText = "Next Question";
@@ -171,6 +175,7 @@ function nextQuestion(){
     if(thisQuestionNumber < Object.keys(questions).length - 1){
         thisQuestionNumber++;
         setQuestionScreenText("Student: " + questions[thisQuestionNumber].question);
+        setQuestionsRemaining();
     }
 }
 

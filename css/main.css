@@ -10,6 +10,10 @@ body{
     text-align: center;
 }
 
+#questionsRemaining {
+    text-align: right;
+}
+
 #gameContainer{
     width: 90%;
     margin: 0px auto;
