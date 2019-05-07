@@ -1,12 +1,15 @@
-//Lara feedback
-//feedback as to why student is leaving
-// maybe student says thanks, and then button for next student
-
 //christine notes
 //book back cover darker
 //newpaper slightly gray
 //(web inside a computer monitor)
 
+//Add question number just below question
+//When questions are exhausted, give congratulations
+// congrats in questions area
+//  give librarian information in response screen
+
+//Write preface instructions
+//At least hit all of the resources, ~10 questions
 
 //get constants
 const student = document.getElementById("student");
@@ -18,17 +21,21 @@ const responseScreenFeedback = document.getElementById("responseScreenFeedback")
 const studentImage = document.getElementById("studentImage");
 const studentMessage = document.getElementById("studentMessage");
 const questions = { 
-    "1" : { //placeholder question
+    "1" : { //Leo question
         "question" : "I'm writing a paper about computer science ethics. Where should I start looking for information?",
         "journal" : "Good place to start looking! Try narrowing your search results to only scholarly articles.",
         "magazine" : "A magazine is not a good place to look for scholarly information.",
         "goodResponses" : ["journal","book","tradePublication"]
     },
-    "2" : { //placeholder question
+    "2" : { //Leo question
         "question" : "Where can I find information about medival architecture?",
         "book" : "This kind of information isn't changing quickly, so you might try a print book.",
         "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
+    },
+    "3" : { //Leo question
+        "question" : "Where should I go to learn more about IT?",
+        "goodResponses" : ["web","book","tradePublication"]
     },
     "default" : { 
         "question" : "placeholder question",
