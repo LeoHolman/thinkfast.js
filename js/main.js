@@ -21,13 +21,14 @@ const questions = {
         "magazine" : "This kind of information isn't the sort of thing usually published in a magazine.",
         "goodResponses" : ["journal","book","web"]
     },
-    "3" : { //Leo question
-        "question" : "Where should I go to learn more about IT?",
-        "goodResponses" : ["web","book","tradePublication"]
+    "3" : { //Sue question
+        "question" : "Where can I find information about the behaviors of online consumers?",
+        "goodResponses" : ["web","journal"]
     },
-    "4" : { //Leo question
-        "question" : "Can you tell me where to look to learn more about Japan?",
-        "goodResponses" : ["web","book","magazine"]
+    "4" : { //Sue question
+        "question" : "My professor asked me to find a peer reviewed article for my research paper.  Where do I find peer reviewed articles?",
+        "journal" : "Peer reviewed, scholarly, and refereed articles are articles that are found in academic publications.  These articles are written by subject matter experts and are also reviewed by other subject matter experts prior to publication to ensure the quality of the article.",
+        "goodResponses" : ["journal"]
     },
     "5" : { //Leo question
         "question" : "Where can I learn more about the election?",
@@ -45,13 +46,13 @@ const questions = {
         "question" : "I'm researching a graphic designer, where can I find information about them?",
         "goodResponses" : ["book", "web", "magazine"]
     },
-    "9" : { //Leo question
-        "question" : "Where can I find more information about the history of chess?",
-        "goodResponses" : ["book", "web", "journal", "magazine"]
+    "9" : { //Sue question
+        "question" : "I need to find information about renewable energy.  Where do I find that type of information?",
+        "goodResponses" : ["newspaper", "web", "journal"]
     },
-    "10" : { //Leo question
-        "question" : "Where can I find demographic information about college graduates?",
-        "goodResponses" : ["web", "tradePublication","journal"]
+    "10" : { //Sue question
+        "question" : "I am writing a paper about the history of American Sign Language.  Where should I look for that information?",
+        "goodResponses" : ["web", "book","journal"]
     },
     "default" : { 
         "question" : "placeholder question",
